@@ -1007,11 +1007,11 @@
       }
     });
 
-    // Contact form graceful fallback if Formspree not configured
+   // Contact form graceful fallback if Formspree not configured
     const form = document.getElementById('contactForm');
     const note = document.getElementById('formNote');
     form?.addEventListener('submit', (e) => {
-      if (form.action.includes('https://formspree.io/f/xnnbpero')) {
+      if (form.action.includes('[[your-id]]')) {
         e.preventDefault();
         alert('Form endpoint not configured yet. Replace [[your-id]] with your Formspree ID or set up your backend API.');
       } else {
@@ -1022,3 +1022,4 @@
 </body>
 
 </html>
+
